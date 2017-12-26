@@ -1,6 +1,10 @@
 package test.controller;
 
 import test.action.FortuneAction;
+import test.action.MemberDetailAction;
+import test.action.MemberListAction;
+import test.action.PersonAction;
+import test.action.ShowtimeAction;
 
 public class UserActionFactory {
 	private static UserActionFactory factory;
@@ -18,6 +22,14 @@ public class UserActionFactory {
 		//만일 /fortune.do 요청이라면
 		if(command.equals("/fortune")) {
 			action = new FortuneAction();
+		}else if(command.equals("/showtime")) {
+			action = new ShowtimeAction();
+		}else if(command.equals("/person")) {
+			action = new PersonAction();
+		}else if(command.equals("/member/detail")) {
+			action = new MemberDetailAction();
+		}else if(command.equals("/member/list")) {
+			action = new MemberListAction();
 		}
 		
 		return action;

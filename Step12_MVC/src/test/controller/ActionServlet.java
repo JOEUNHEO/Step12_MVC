@@ -12,8 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("*.do")
 public class ActionServlet extends HttpServlet{
 	//. 을 포함한 요청 확장자의 길이
-	public static final int INCLUDE_EXTENSION_LENGTH=3;
-		
+	public static final int INCLUDE_EXTENSION_LENGTH=3; // '.do'의 길이		
 	@Override
 	protected void service(HttpServletRequest request, 
 			HttpServletResponse response) throws ServletException, IOException {
